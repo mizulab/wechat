@@ -1,6 +1,6 @@
 {
-    "name": "overtrue/wechat",
-    "description": "微信SDK",
+    "name": "mizulib/wechat",
+    "description": "自用微信SDK",
     "keywords": [
         "wechat",
         "weixin",
@@ -10,8 +10,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "overtrue",
-            "email": "anzhengchao@gmail.com"
+            "name": "mizulab",
+            "email": "xxxx@gmail.com"
         }
     ],
     "require": {
