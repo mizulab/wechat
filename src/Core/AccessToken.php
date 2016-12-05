@@ -108,7 +108,10 @@ class AccessToken
         $cached = $this->getCache()->fetch($cacheKey);
 
         if ($forceRefresh || empty($cached)) {
-            $token = $this->getTokenFromServer();
+            // $token = $this->getTokenFromServer(); 原方法
+            // 重写获取方法从mrz获取
+            $token = file_get_contents("http://www.meirenzhi.cc/index.php?g=home&m=mallapi&a=getAccessToken");
+            $token = json_decode($token, true);
 
             // XXX: T_T... 7200 - 1500
             $this->getCache()->save($cacheKey, $token['access_token'], $token['expires_in'] - 1500);
