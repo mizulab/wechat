@@ -107,7 +107,7 @@ class Js extends AbstractAPI
 
         //$result = $this->parseJSON('get', [self::API_TICKET, ['type' => 'jsapi']]); 原方法
         // 重写
-        $result = file_get_contents("http://www.meirenzhi.cc/index.php?g=home&m=mallapi&a=getJsticket");
+        $result = file_get_contents("http://hy.cottontuan.com/index.php?g=home&m=mallapi&a=getJsticket");
         $result = json_decode($result, true);
 
         $this->getCache()->save($key, $result['ticket'], $result['expires_in'] - 500);
