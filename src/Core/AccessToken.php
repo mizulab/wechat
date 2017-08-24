@@ -110,7 +110,7 @@ class AccessToken
         if ($forceRefresh || empty($cached)) {
             // $token = $this->getTokenFromServer(); 原方法
             // 重写获取方法从mrz获取
-            $token = file_get_contents("http://www.meirenzhi.cc/index.php?g=home&m=mallapi&a=getAccessToken");
+            $token = file_get_contents("http://hy.cottontuan.com/index.php?g=home&m=mallapi&a=getAccessToken");
             $token = json_decode($token, true);
 
             // XXX: T_T... 7200 - 1500
